@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0047)http://202.114.18.8:8080/cshiyan/cpp/exp19.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>实验19</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #993300;
+}
+.STYLE2 {
+	font-size: 16px;
+	color: #000000;
+}
+.STYLE3 {font-size: 16px; color: #000000; font-weight: bold; }
+-->
+</style>
+<style type="text/css"></style></head>
+
+<body>
+<div align="center"><span class="STYLE1">实验十九 输入/输出与重载</span></div>
+<p class="STYLE3">  一、	实验目的</p>
+<p class="STYLE2"> 1、	掌握输入、输出的格式控制。理解类ios提供的公有的无名枚举类型的格式控制符及怎样使用类ios的公有接口函数实现控制。</p>
+<p class="STYLE2"> 2、	掌握流操作子</p>
+<p class="STYLE2"> 3、	熟悉标准设备的输入/输出。特别是cin的使用细则，提高输入的稳健性。</p>
+<p class="STYLE2"> 4、	掌握输入/输出运算符的重载。  </p>
+<p class="STYLE3">二、	实验内容  </p>
+<p class="STYLE2"><strong>1、</strong>	编程：按下列要求实现数据的输入/输出：</p>
+<p class="STYLE2"> a）分别以左和右对齐方式输出整数，域宽为12；</p>
+<p class="STYLE2"> b)	以八进制、十进制、十六进制输入输出整数；</p>
+<p class="STYLE2"> c)	实现浮点数的指数格式和定点格式的输入输出，并指定精度，按你所见到的实际情况进行调整，直到满意；</p>
+<p class="STYLE2"> d)	把字符串读入字符型数组变量中，从键盘输入，要求输入串的空格也全部读入，以回车换行符结束；</p>
+<p class="STYLE2"> e)	以上要求用流成员函数和流操作子各做一遍。 </p>
+<p class="STYLE2"><strong>2、</strong>	范例：从输入流中分析出数字串。</p>
+<p class="STYLE2">   #include&lt; iostream&gt;
+  <iostream>
+</iostream></p>
+<p class="STYLE2">using namespace std;</p>
+<p class="STYLE2"> int main(){</p>
+<p class="STYLE2">int getnum(char *);</p>
+<p class="STYLE2"> char buf[100];</p>
+<p class="STYLE2"> while (getnum(buf)){</p>
+   <p class="STYLE2"> cout &lt;&lt; "Digit string is :";</p>
+   <p class="STYLE2"> cout &lt;&lt; buf &lt;&lt; endl;</p>
+<p class="STYLE2">  }</p>
+ <p class="STYLE2"> return 0;</p>
+ <span class="STYLE2">} </span>
+<p class="STYLE2">int getnum(char *s){</p>
+<p class="STYLE2">*s = '\0';</p>
+  <p class="STYLE2">char ch;</p>
+  <p class="STYLE2">while (cin.get(ch) &amp;&amp; !cin.eof() &amp;&amp; !isdigit(ch)) ;//去掉前面的非数字字符</p>
+  <p class="STYLE2">do  //读入数字串</p>
+  <p class="STYLE2">  *s++ = ch;</p>
+ <p class="STYLE2"> while (cin.get(ch) &amp;&amp; !cin.eof() &amp;&amp; isdigit(ch));</p>
+ <p class="STYLE2"> *s = '\0';，</p>
+ <p class="STYLE2"> if (!cin.eof())    cin.putback(ch);  //A</p>
+<p class="STYLE2"> if (!cin || cin.eof())    return 0;  //B</p>
+ <p class="STYLE2"> return  1;</p>
+ <p class="STYLE2">}</p>
+ <p class="STYLE2">【要求】</p>
+ <p class="STYLE2">(1)	解释A行的作用，表面上看A行在本程序中毫无用处。</p>
+ <p class="STYLE2"> (2)	解释B行的作用，“！cin”表示什么意思？</p>
+ <p class="STYLE2"> <strong>3、</strong>	编程：将以上程序修改为自定义整型数类的重载的提取运算符“&gt;&gt;”。</p>
+ <p class="STYLE2">&nbsp;
+</p>
+   <p></p>
+    <p></p>
+
+
+</body></html>

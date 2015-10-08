@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0046)http://202.114.18.8:8080/cshiyan/cpp/exp8.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>实验八</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-size: 24px;
+	color: #990033;
+}
+.STYLE2 {font-size: 16px}
+.STYLE3 {font-size: 16px; font-weight: bold; }
+.STYLE4 {color: #990033}
+-->
+</style></head>
+
+<body>
+<p align="center"><span class="STYLE1"><strong>实验八</strong><strong> 函数递归算法</strong><strong> </strong></span></p>
+<p class="STYLE3"> 
+一、	实验目的</p>
+<p class="STYLE2"> 1、	掌握函数的嵌套调用和递归调用</p>
+<p class="STYLE2"> 2、	掌握递归算法 </p>
+<p class="STYLE3">二、	实验内容</p>
+<p class="STYLE2"> 1． 函数嵌套调用是在被调用的函数内在调用其他函数，而递归调用时在被调用函数内调用自身。</p>
+<p class="STYLE2">嵌套调用的层数没有限制，而递归调用函数必须包含使递归终止的语句。 </p>
+<p class="STYLE2">范例：求组合数 Cn<span class="STYLE4">m</span>=n!/[m! (n-m)!]（m为指数）  </p>
+<p class="STYLE2">【分析】 求组合数要用到求阶乘，可将求阶乘定义为一个函数，在求组合数的函数中嵌套调用阶乘函数。</p>
+<p class="STYLE2"> 由于n!=n*(n-1)!，求阶乘是一个典型的递归算法，在此用递归方法实现。</p>
+<p class="STYLE2"> 【程序】 </p>
+<p class="STYLE2"><img src="./prac8_files/19.jpg" width="474" height="465" align="middle"></p>
+<p class="STYLE2">【注意】</p>
+<p class="STYLE2">(1) 因为阶乘极易发生溢出，所以n最大值取12，否则运算中会发生溢出。</p>
+<p class="STYLE2"> (2) 在函数内定义局部变量时，变量名不应与函数名相同。例如，在A行，不可定义变量名为com; 否则程序编译会出错误。</p>
+<p class="STYLE2"> (3）还有一种常见错误，例如：  </p>
+<p class="STYLE2">long fac(int  i)</p>
+<p class="STYLE2"> { 
+  if(i==0||i==1) fac(i)=1;  </p>
+<p class="STYLE2">else fac(i)=i*fac(i-1);</p>
+<p class="STYLE2"> return fac(i);
+  }</p>
+<p class="STYLE2">编译此程序，会出现提示信息 Left_value required 的错误，请思考这是为什么？然后修改正确。</p>
+<p class="STYLE2">&nbsp;</p>
+<p class="STYLE2"> <strong>2、</strong>	用递归函数实现勒让德多项式。</p>
+<p class="STYLE2"><img src="./prac8_files/191.jpg" width="327" height="70" align="middle">&nbsp;在主函数中求P4(1.5)。</p>
+<p class="STYLE2">&nbsp; </p>
+<p class="STYLE2">★	选做题<strong>3</strong>、定义递归函数实现Ackman函数。</p>
+<p class="STYLE2"><img src="./prac8_files/191.jpg" width="327" height="70" align="middle">&nbsp;其中m,n为正整数。 设计程序求Acm(2,1)，Acm(3,2)。</p>
+
+
+</body></html>

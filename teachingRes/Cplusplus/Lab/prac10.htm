@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0047)http://202.114.18.8:8080/cshiyan/cpp/exp10.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>实验十</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-size: 24px;
+	color: #993333;
+}
+.STYLE2 {font-size: 16px}
+.STYLE3 {font-size: 16px; font-weight: bold; }
+-->
+</style>
+<style type="text/css"></style></head>
+
+<body>
+<p align="center"><span class="STYLE1"><strong>实验十</strong><strong>  类与对象的基本概念</strong> </span></p>
+<p class="STYLE3">一、	实验目的</p>
+<p class="STYLE2">   &nbsp;&nbsp;类是C++扩展数据类型，可以封装不同类型的数据成员和函数成员。类是面向对象程序设计的基础。本次实验内容包括面向对象的基本概念、构造函数与析构函数，从实际问题抽象出类等，通过实验要求掌握以下内容：</p>
+<p class="STYLE2">1、	掌握面向对象的基本概念和类的定义方法。</p>
+<p class="STYLE2"> 2、	掌握类成员的访问权限以及访问类成员的方法。</p>
+<p class="STYLE2"> 3、	掌握内联函数和默认函数。</p>
+<p class="STYLE2"> 4、	掌握构造函数和析构函数的意义及使用方法。  </p>
+<p class="STYLE3">二、	实验内容</p>
+<p class="STYLE2"> <strong>1、</strong>	范例：设计并测试一个矩形类（Rectangle）。属性为矩形的左下角与右上角的坐标，矩形水平放置。操作为计算矩形的周长和面积。  </p>
+<p class="STYLE2">程序】</p>
+<p class="STYLE2"><img src="./prac10_files/24.jpg"  align="middle">&nbsp;</p>
+
+<p class="STYLE2"><img src="./prac10_files/25.jpg"  align="middle"></p>
+<p class="STYLE2">【要求】</p>
+<p class="STYLE2">（1）	将Rectangle(double l=0, double t=0, double r=0, double b=0); 改为Rectangle(double l, double t, double r, double b);</p>
+<p class="STYLE2"> 程序仍能正确运行吗？为什么？</p>
+<p class="STYLE2"> （2）	注意成员函数void show( )、int calArea ()	、int calPerimeter( )的使用，因为在第三章如果需编写类似功能的一般函数是需要带参数（形参）的。</p>
+<p class="STYLE2">而在此处作为类的成员函数又不需要带参数。思考为什么？ </p>
+<p class="STYLE2">（3）	理解void Assign(double l,double t,double r,double b);函数的作用。将Rectangle(double l=0, double t=0, double r=0, double b=0); </p>
+<p class="STYLE2">改为Rectangle(double l, double t, double r, double b);这时，有人认为Rectangle(double l, double t, double r, double b) 和void assign(double l,double t,</p>
+<p class="STYLE2">double r,double b)的功能相同，那么assign 函数能否去掉呢？请试一试，结果会怎样？</p>
+<p class="STYLE2"> <strong>2、</strong>	定义一个圆类（Circle），要求用两种方法定义： </p>
+<p class="STYLE2">方法一： 要求属性为半径，操作为计算圆的周长和面积。</p>
+<p class="STYLE2"> 方法二： 要求属性为半径（radius）、圆周长和面积，操作为输入半径，并计算周长、面积，输出半径、周长和面积。要求定义构造函数（以半径为参数，缺省值为0，周长和面积在构造函数中生成）和拷贝构造函数。 </p>
+<p class="STYLE2">3、设计一个学校在册人员类（Person）。数据成员包括：身份证号（IdPerson），姓
+  名（Name），性别（Sex），生日（Birthday）和家庭住址（HomeAddress）。成员函数包
+  括人员信息的录入和显示等。使用多文件结构（参考课程主页给出的例子）</p>
+<p class="STYLE2"> ★选做题 4、编程建立一个分数类。分数类的数据成员包括分子和分母，操作包括约分、通分、加、减、乘、除、求倒数、比较、显示和输入。分数类的定义如下：
+  &nbsp;</p>
+<p class="STYLE2"><img src="./prac10_files/26.jpg" align="middle"></p>
+<p class="STYLE2">【要求】完成上述所有成员函数并进行检验。 请用多文件结构完成，包括后续章节的题目</p>
+<p class="STYLE2"> ★选做题<strong> 5、</strong>集合是具有同一属性（共性）而又能互相区别（个性）的多个成员汇集起来的整体，构成集合的每个成员称为集合的元素，元素间没有顺序关系。</p>
+<p class="STYLE2">例如，所有的大写英文字母是一个集合，它包括26个元素：A、B、…、Z。不包含任何元素的集合称为空集合。</p>
+<p class="STYLE2"> 【实验要求]】</p>
+<p class="STYLE2">自定义一个集合类set，采用数组存放集合的元素。自定义集合运算包括：</p>
+<p class="STYLE2"> 1) 判断元素elem是否为集合set的元素。</p>
+<p class="STYLE2"> 2) 为集合添加一个元素elem。</p>
+<p class="STYLE2"> 3) 从集合中删除一个元素elem。</p>
+<p class="STYLE2"> 4) 复制一个集合，其元素与原集合完全一样。 </p>
+<p class="STYLE2">5) 显示集合中的所有元素。  </p>
+<p class="STYLE2">6) 求两个集合中相同的元素，即求两个集合的交集。</p>
+<p class="STYLE2"> 7) 求两个集合中所有的元素，即求两个集合的并集。  </p>
+<p class="STYLE2">8) 判断两集合包含的元素是否完全相同。</p>
+<p class="STYLE2"> 9) 判断一个集合是否被包含在另一个集合之中，即是否为另一个集合的子集。*/ </p>
+<p class="STYLE2">【程序】</p>
+<p class="STYLE2"><img src="./prac10_files/27.jpg"  align="middle"></p>
+<p class="STYLE2"><img src="./prac10_files/28.jpg"  align="middle">&nbsp;</p>
+<p class="STYLE2"><img src="./prac10_files/29.jpg"  align="middle">&nbsp;</p>
+<p class="STYLE2"><img src="./prac10_files/30.jpg"  align="middle">&nbsp;</p>
+<p class="STYLE2"><img src="./prac10_files/301.jpg" align="middle">&nbsp;</p>
+  
+  &nbsp;</p>
+
+
+</body></html>

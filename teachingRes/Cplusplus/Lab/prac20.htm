@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0047)http://202.114.18.8:8080/cshiyan/cpp/exp20.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>实验20</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-size: 24px;
+	color: #993300;
+}
+.STYLE2 {font-size: 16px}
+.STYLE3 {font-size: 16px; font-weight: bold; }
+-->
+</style>
+<style type="text/css"></style></head>
+
+<body>
+<p align="center"><span class="STYLE1"><strong>实验二十</strong> <strong>文件</strong><strong> </strong></span></p>
+<p class="STYLE3">一、	实验目的</p>
+<p class="STYLE2"> 1.	掌握文件流的打开、读/写与关闭。</p>
+<p class="STYLE2"> 2.	掌握文件的随机访问方法。</p>
+<p class="STYLE2"> 3.	学会使用构造函数打开文件来创建对象，使用析构函数撤销对象并存入文件。</p>
+<p class="STYLE3"> 二、	实验内容  </p>
+<p class="STYLE2"><strong>1.</strong> 建立一个应用程序，包括数据输入、存盘、读盘、操作数据后存储。通过随机数函数rand()产生20个整数，逐个将这些数以二进制方式写入文件file.dat中。</p>
+<p class="STYLE2">然后读出这些数，在内存中对它们进行增序排序，再将排序后的数以文本方式逐个写入file.out文件中。</p>
+<p class="STYLE2"> [程序] </p>
+<p class="STYLE2">用C++的文件流进行文件管理，用流类的函数进行文件读写。</p>
+<p class="STYLE2"> #include &lt; cstdlib&gt; //可以不写</p>
+ <p class="STYLE2"> #include &lt; fstream&gt;</p>
+<p class="STYLE2">  #include &lt; iostream&gt;</p>
+ <p class="STYLE2"> using namespace std;</p>
+<p class="STYLE2">const int n=20;</p>
+  <p class="STYLE2"> void sort(int [],int);</p>
+<p class="STYLE2"> int main(){</p>
+  <p class="STYLE2"> fstream dat, out;			//定义文件流对象</p>
+  <p class="STYLE2"> int i,a[n],b[n];</p>
+  <p class="STYLE2"> dat.open("file.dat",ios::out|ios::in|ios::binary);//为读写打开二进制文件</p>
+  <p class="STYLE2"> if(!dat){                   //文件不存在</p>
+  <p class="STYLE2"> dat.clear(0);           //清状态字</p>
+  <p class="STYLE2"> dat.open("file.dat",ios::out|ios::binary);//文件不存在，建立二进制文件</p>
+  <p class="STYLE2"> dat.close();</p>
+  <p class="STYLE2">dat.open("file.dat",ios::out|ios::in|ios::binary);//为读写打开二进制文件</p>
+  <p class="STYLE2">if(!dat){</p>
+  <p class="STYLE2"> cout&lt;&lt;"cannot open file\n";
+  return -1;</p>
+  <p class="STYLE2">}
+}</p>
+  <p class="STYLE2"> for(i=0;i&lt; n;i++)</p>
+  <p class="STYLE2">{
+  a[i]=rand();</p>
+  <p class="STYLE2"> dat.write((char*)&amp;a[i],sizeof(int));//将二十个数写入文件</p>
+  <p class="STYLE2"> }//因打开时，文件指针在头部，所以是刷新</p>
+  <p class="STYLE2"> dat.seekg(0);//将文件指针移至文件头</p>
+  <p class="STYLE2"> for(i=0;i&lt; n;i++)</p>
+  <p class="STYLE2">{
+  dat.read((char*)&amp;b[i],sizeof(int));//读出二十个数</p>
+  <p class="STYLE2"> }</p>
+  <p class="STYLE2"> sort(b,n); //调用排序函数</p>
+  <p class="STYLE2"> for(i=0;i&lt; n;i++)</p>
+  <p class="STYLE2">{
+  cout&lt;&lt; b[i]&lt;&lt;'\t';</p>
+  <p class="STYLE2"> if(i%5==4) cout&lt;&lt;'\n';  </p>
+  <p class="STYLE2">}  </p>
+  <p class="STYLE2">cout&lt;&lt; endl;  </p>
+  <p class="STYLE2">out.open("file.out",ios::out);		//为输出打开文本文件</p>
+  <p class="STYLE2"> if(!out)</p>
+  <p class="STYLE2">{
+		cout&lt;&lt;"cannot open file\n";
+  return -1;
+  }</p>
+  <p class="STYLE2"> for(i=0;i&lt; n;i++)</p>
+  <p class="STYLE2">{					//将排序后数据写入文本文件  </p>
+  <p class="STYLE2">out&lt;&lt; b[i]&lt;&lt;'\t';</p>
+  <p class="STYLE2"> if(i%5==4) </p>
+  <p class="STYLE2">out&lt;&lt;'\n';
+  }</p>
+  <p class="STYLE2"> out&lt;&lt; endl;</p>
+  <p class="STYLE2"> out.close();						//关闭文件</p>
+  <p class="STYLE2"> dat.close();    </p>
+  <p class="STYLE2">return 0;
+    }    </p>
+  <p class="STYLE2">void sort(int x[],int m)</p>
+  <p class="STYLE2">{					//排序函数
+    int i,j,k,t;</p>
+  <p class="STYLE2"> for(i=0;i&lt; m-1;i++)</p>
+  <p class="STYLE2">{
+		k=i;</p>
+  <p class="STYLE2"> for(j=i+1;j&lt; m;j++) 	</p>
+  <p class="STYLE2">if(x[j]&lt; x[k]) </p>
+  <p class="STYLE2">k=j;</p>
+  <p class="STYLE2"> if(k!=i)</p>
+  <p class="STYLE2">{
+t=x[i];x[i]=x[k];x[k]=t;</p>
+  <p class="STYLE2"> }</p>
+  <p class="STYLE2"> }</p>
+  <p class="STYLE2"> }</p>
+  <p class="STYLE2"> 【要求】</p>
+  <p class="STYLE2"> (1).	读懂该程序，并运行记录下程序的执行结果。</p>
+  <p class="STYLE2"> (2).	将此程序改造为一个类a[20],b[20]为私有数据成员；在构造函数中用随机数发生器为a[ ]赋值，并打开两个文件；在析构函数中关闭文件；将其余各操作定义为成员函数。</p>
+  <p class="STYLE2"> <strong>2、</strong>两个文件中各有若干个以递增次序排列的实数， 编写一个程序将这两个文件中的数统一排序后写入到一个新的文件中。并检验新文件数据是否正确。
+  &nbsp;  </p>
+  <p></p>
+
+
+</body></html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0047)http://202.114.18.8:8080/cshiyan/cpp/exp11.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>实验十一</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-size: 24px;
+	color: #990000;
+}
+.STYLE2 {font-size: 16px}
+.STYLE3 {font-size: 16px; font-weight: bold; }
+-->
+</style>
+<style type="text/css"></style></head>
+
+<body>
+<p align="center"><span class="STYLE1"><strong>实验十一</strong><strong> 引用与复制构造函数</strong><strong> </strong></span></p>
+<p class="STYLE3">一.实验目的</p>
+<p class="STYLE2"> 1、	掌握引用的概念及应用，掌握引用作为函数参数的方法。
+2、	学会编写与应用复制构造函数。</p>
+<p class="STYLE3"> 二．	实验内容</p>
+<p class="STYLE2"><strong>1、</strong>范例：编写一个函数，其原型为：void Index(int a[], int n,int &amp; sub)，其功能是，在大小为n的数组a中，查找某个数sub，</p>
+<p class="STYLE2">若找到，将其下标存放在sub中，若没找到，将-1存放在sub中，在主调函数中通过判断值来判断数组中是否有该数。在这里，sub是引用类型的参数，但起返回值的作用。</p>
+<p class="STYLE2"> 【程序】 </p>
+<p class="STYLE2"><img src="./prac11_files/32.jpg" width="626" height="525" align="middle">&nbsp;</p>
+<p class="STYLE2">【要求】</p>
+<p class="STYLE2"> （1）修改主程序连续查找数字的循环语句，使程序能在输入特定数字后退出循环。</p>
+<p class="STYLE2"> （2）将void Index(int a[], int n,int &amp; sub); 改为void Index(int a[], int n,int  sub);程序还能正确执行吗？试分析其结果并解释。</p>
+<p class="STYLE2">  (3)在上述修改的基础上如果结果不正确，怎样修改可以同样得到正确的结果。  </p>
+<p class="STYLE2"><strong>2、</strong>一个声明为返回引用的函数，既可以作为右值出现在赋值号的右边，也可以作为左值出现在赋值号的左边。下面是一个函数调用本身作为左值的例子。
+  &nbsp;</p>
+<p class="STYLE2"><img src="./prac11_files/33.jpg" width="623" height="293" align="middle">&nbsp;</p>
+<p class="STYLE2">【要求】</p>
+<p class="STYLE2">修改程序使用非返回引用的函数实现上述功能。试分析两者之间的区别。</p>
+<p class="STYLE2"> <strong>3、</strong>为矩形类定义复制构造函数。矩形类见主教材的例4.2.</p>
+<p class="STYLE2"> 在rect.h 头文件中的类rect定义中加入以下代码：</p>
+<p class="STYLE2"> Rectangle(const Rectangle &amp; rhs);</p>
+<p class="STYLE2"> 在rect.cpp文件中添加以下代码：</p>
+<p class="STYLE2"> Rectangle::Rectangle（const Rectangle &amp; rhs）:m_left(rhs.m_left),m_top(rhs.m_top),m_right(rhs.m_right),m_bottom(rhs.m_bottom){  </p>
+
+<p class="STYLE2">}//复制构造函数</p>
+<p class="STYLE2"> 在main( )函数中添加以下代码：</p>
+<p class="STYLE2"> Rectangle rect2(rect1);</p>
+<p class="STYLE2"> cout &lt; &lt; ”由复制构造函数生成的rect2:”&lt;&lt;&lt; endl;</p>
+<p class="STYLE2">rect2.Show( );</p>
+<p class="STYLE2"> 这里的复制构造函数是默认的按成员语义定义的，可以不写，系统会自动提供。&nbsp;</p>
+</body></html>

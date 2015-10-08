@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0046)http://202.114.18.8:8080/cshiyan/cpp/exp4.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>实验四</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-size: 24px;
+	color: #990000;
+}
+.STYLE2 {
+	font-size: 18px;
+	font-weight: bold;
+}
+.STYLE4 {
+	font-size: 16px;
+	font-weight: bold;
+}
+.STYLE5 {font-size: 16px}
+-->
+</style>
+<style type="text/css"></style></head>
+
+<body>
+<p align="center"><span class="STYLE1"><strong>实验四</strong><strong> 循环结构程序设计</strong> </span></p>
+<p class="STYLE2">一、实验目的</p>
+<p class="STYLE5">1.掌握3种循环结构：while ,do—while ,for 的区别与联系，以及它们之间相互转换的方法，并能正确使用它们。 </p>
+<p class="STYLE5">2.掌握与循环语句相关的break 语句和continue 语句的使用方法</p>
+<p><span class="STYLE4">二. 实验内容</span></p>
+<p><span class="STYLE5"><strong>1.</strong>输入正整数n， 计算n的阶乘</span>。</p>
+<p>【分析】 <span class="STYLE5">由于n!=1*2*3*……*n,因此，要计算n的阶乘可以从1开始，由1的阶乘乘以2得到2的阶乘，再乘以3得到3的阶乘.......以此类推。 </span></p>
+<p><br>
+  【程序】 </p>
+<p><img src="./prac4_files/13.jpg" width="381" height="376" align="middle">&nbsp;</p>
+<p>【要求】 </p>
+<p>(1)<span class="STYLE5">分别输入数据 -2， 1 ，5, 10, 20  调试运行程序，并记录程序结果。</span> </p>
+<table border="1" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td width="204"><p align="center">输入 </p></td>
+    <td width="252"><p align="center">结果 </p></td>
+  </tr>
+  <tr>
+    <td width="204" valign="top"><p>　</p></td>
+    <td width="252" valign="top"><p>　</p></td>
+  </tr>
+  <tr>
+    <td width="204" valign="top"><p>　</p></td>
+    <td width="252" valign="top"><p>　</p></td>
+  </tr>
+  <tr>
+    <td width="204" valign="top"><p>　</p></td>
+    <td width="252" valign="top"><p>　</p></td>
+  </tr>
+  <tr>
+    <td width="204" valign="top"><p>　</p></td>
+    <td width="252" valign="top"><p>　</p></td>
+  </tr>
+  <tr>
+    <td width="204" valign="top"><p>　</p></td>
+    <td width="252" valign="top"><p>　</p></td>
+  </tr>
+</tbody></table>
+<p>(2)<span class="STYLE5"> 删除程序中//A 处的赋值语句 return 1; 重新以上述数据调试运行程序，结果是否正确，如果不正确，该如何修改？</span></p>
+<p class="STYLE5">(3) 删除程序中//B处的语句 result=1;重新以上述数据调试运行程序，结果是否正确，如果不正确，该如何修改？</p>
+<p class="STYLE5">(4) 将程序中语句 double result=0; 改为 int result=0; 重新以上述数据调试运行程序，结果如何？为什么？ </p>
+<p class="STYLE5">　</p>
+<p class="STYLE5"><strong>2.</strong> 范例：编程计算求π的近似值(要求小数点后面10位)。</p>
+<p class="STYLE5">提示： 可利用下列公式计算π值：</p>
+<div> <img src="prac4_files/prac4_pi2.jpg" alt="pi2" width="383" height="74" /><img src="prac4_files/prac4_pi1.jpg" alt="pi" width="616" height="81"> </div>
+<div></div>
+<p>【程序】</p>
+<p>
+<img border="0" src="./prac4_files/4_1.JPG" width="283" height="336">&nbsp;</p>
+<p class="STYLE5">【要求】 </p>
+<p class="STYLE5">（1）输入程序编译后使用Debug跟踪，单步执行程序，记录以下变量值的变化。</p>
+<div align="left">
+  <table border="1" cellspacing="0" cellpadding="0" width="382">
+    <tbody><tr>
+      <td width="137"><br>
+        i </td>
+      <td width="137"><p>term</p></td>
+      <td width="107"><p>sum</p></td>
+    </tr>
+    <tr>
+      <td width="137"><p>0</p></td>
+      <td width="137"><p>　</p></td>
+      <td width="107"><p>　</p></td>
+    </tr>
+    <tr>
+      <td width="137"><p>1</p></td>
+      <td width="137"><p>　</p></td>
+      <td width="107"><p>　</p></td>
+    </tr>
+    <tr>
+      <td width="137"><p>2</p></td>
+      <td width="137"><p>　</p></td>
+      <td width="107"><p>　</p></td>
+    </tr>
+    <tr>
+      <td width="137"><p>3</p></td>
+      <td width="137"><p>　</p></td>
+      <td width="107"><p>　</p></td>
+    </tr>
+    <tr>
+      <td width="137"><p>4</p></td>
+      <td width="137"><p>　</p></td>
+      <td width="107"><p>　</p></td>
+    </tr>
+    <tr>
+      <td width="137"><p>5</p></td>
+      <td width="137"><p>　</p></td>
+      <td width="107"><p>　</p></td>
+    </tr>
+    <tr>
+      <td width="137"><p>:</p></td>
+      <td width="137"><p>　</p></td>
+      <td width="107"><p>　</p></td>
+    </tr>
+  </tbody></table>
+</div>
+  <p class="STYLE5">回答以下问题：<br>
+  a）从跟踪结果分析，term和sum的值有什么错误？<br>
+  b）循环结束后，i的值是多少？用什么简单的办法可以看到？<br>
+  c）对程序作何修改可以使其得到正确的结果？</p>
+  <p class="STYLE5">　</p>
+  <p class="STYLE5"><strong>3.</strong>将输入的一段文本中的小写字母转换成大写字母。</p>
+<p class="STYLE5"><br>
+  【分析】由ASCII码表可以看出，大写英文字母的ASCII码值在65至90之间，小写英文字母的ASCII码值在97至122 之间，每一个英文字母的大写和小写的ASCII码相差32。</p>
+<p class="STYLE5">&nbsp; </p>
+<p class="STYLE5"><strong>4</strong>. 编程：设计一个程序，输入一个日期，要求算出这一天是本年的第几天。</p>
+<p class="STYLE5">【分析】要算出某天是当年的第几天，应该将当年中本月之前所有月的天数相加，再加上本月至此的天数。</p>
+<p class="STYLE5">但这里有一个闰年问题，2月是一个特殊月，闰年的2月有29天，非闰年的2月只有28天。<br>
+  【提示】判断某年是闰年的条件是：该年号能被4整除但不能被100整除，或者能被400整除。例如，1996、2000是闰年，但1800不是闰年。 </p>
+<p class="STYLE5">5. 猜数字小游戏。 程序随机产生0-1000之间的一个整数，玩家开始猜测这个数字是多少， 如果玩家猜测的数比程序产生的数字小，提醒玩家所猜的数字小了，请重试，如果猜测的数字比程序产生的数字大，告诉玩家所猜数字大了，请重试，直到玩家猜对为止，告诉玩家总共的猜测次数，并提醒玩家是否继续猜下一个数。</p>
+<p class="STYLE5">【提示】 产生一个随机数利用rand() 函数，需要包含#include &lt;cstdlib&gt;，并利用srand()初始化随机数发生器的种子（一般用time()函数获取一个系统时间作为种子，包含#include &lt;ctime&gt;），具体用法见第9题　</p>
+<p class="STYLE5"><strong>6.</strong> 约瑟夫（Josephus）问题：n 个人围坐成一圈，从 1 开始顺序编号；游戏开始，从第一个人开始由 1 到 m 循环报数，</p>
+<p class="STYLE5">报到 m 的人退出圈外，问最后留下的那个人原来的序号。<br>
+  【分析]】本题可定义一个容器(vector&lt;bool&gt;)，初始化大小（元素个数）为n。 容器里元素的值标识该人是否出局，1在圈内，0出局。</p>
+<p class="STYLE5">值为0的元素不参加报数。可用一个整型数k做计数器，采用倒计数，记录留下的人数。<br>
+  【提示】容器里的元素是线性排列的，而人是围成圈的，用容器表示要有一种从容器尾部跳到其头部的技巧，即下标加1除以n求余数。 </p>
+<p class="STYLE5">7. 输入一定数目的成绩（最少5个学生的成绩）,利用vector将这些成绩存储起来, 统计平均分，最高分和最低分，然后将每个同学的成绩转换成等级制,如100:A++, 98-99:A+,93-97: A,90-92: A-,...,68-69:D+,63-67: D,60-62: D- , 0-59： F</p>
+<p class="STYLE5">如： 输入 59 68 95 74 82 100 </p>
+<p class="STYLE5">输出结果： </p>
+<p class="STYLE5">最高分：100 最低分： 59 平均分：80</p>
+<p class="STYLE5"> 1 [59：F]</p>
+<p class="STYLE5">2 [68: D+]</p>
+<p class="STYLE5">3 [95: A]</p>
+<p class="STYLE5">4 [74: C] </p>
+<p class="STYLE5">5 [82: B-] </p>
+<p class="STYLE5">6 [100: A++]　</p>
+<p class="STYLE5">★ （选做题）<strong>8.</strong> 输入若干字符，统计其中数字字符、空白字符和其他字符的个数，输入EOF结束。 <br>
+【分析】 要对字符进行统计，需要循环语句反复输入字符，读入字符后用switch 语句判断字符的种类：要统计3种字符数，需要定义3个用于计数的变量 nDigit  ,nWhite ,nOther,</p>
+<p class="STYLE5">并置初始值0；读入字符用cin.get()函数，在这里用while循环比较合适。白字符指空白键、Tab键和回车键。EOF表示End of  File ,其值为-1，从键盘输入 CTRL+Z键即可。</p>
+<p class="STYLE5">这里采用重载的 int cin.get( )函数，它返回的是整型数，所以能返回EOF。<br>
+  【要求】 </p>
+<ol class="STYLE5">
+  <ol>
+    <li>程序中的变量c ，可以定义为char 类型吗？ 请试之，并解释原因。 </li>
+    <li>请注意程序中case 分支语句后的break语句，break能去掉吗？为什么？ </li>
+    <li>如果要分别统计0-9中个数字出现的次数，怎样才能有效地实现，请修改程序。 </li>
+    <li>如果要统计输入的一段文字中出现的行数、单词数和字符数，又怎样有效地实现，请完成之。 </li>
+  </ol>
+</ol>
+<p class="STYLE5"><img src="./prac4_files/401.jpg" width="640" height="535" align="middle"></p>
+<p class="STYLE5">（选做题） 9.猜字游戏，规则如下，程序初始化一个单词集合，每次游戏开始时，程序随机选择一个单词让玩家来猜，玩家每次只能猜一个字母，如果选择的单词里有玩家所猜的字母，则玩家猜测成功，程序将显示单词里所有猜中的字母，如果单词里没有所猜字母，则猜测失败，共有六次机会。
+提示： 假如系统选择了单词good， 玩家第一次猜测为a， 程序提醒玩家猜错，还有5次机会，并显示玩家已经猜过的字母和到当前为止所猜的单词中正确的猜测（没有猜中的字母用*代替，第一次没有猜中所以显示****）； 第二次如果玩家猜o， 猜测正确，显示玩家到当前为止所猜的单词中正确的猜测，其他未猜中的用*代替（*oo*）；第三次如果玩家猜a，提醒玩家此字母已经猜过，请重试，并显示玩家所有猜错的字母。依次进行，直到玩家猜中或者猜错的次数达到最大限制次数，此次猜单词游戏结束，询问玩家是否继续下一个单词的猜测
+<br clear="all">
+<img src="prac4_files/4_8.png" />
+
+
+</p>
+</body></html>

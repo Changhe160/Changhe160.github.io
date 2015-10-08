@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0047)http://202.114.18.8:8080/cshiyan/cpp/exp18.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>实验18</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-size: 24px;
+	color: #993300;
+}
+.STYLE2 {font-size: 16px}
+.STYLE3 {font-size: 16px; font-weight: bold; }
+-->
+</style>
+<style type="text/css"></style></head>
+
+<body>
+<p align="center"><span class="STYLE1"><strong>实验十七</strong><strong> 虚函数与多态、纯虚函数</strong><strong> </strong></span></p>
+<p><strong>&nbsp;<span class="STYLE2">一.实验目的</span></strong></p>
+<p class="STYLE2"> 1.  在掌握继承与派生关系的基础上，进一步理解虚函数与多态性的关系，实现运行时的多态。  </p>
+<p class="STYLE2">2.  学会定义和使用纯虚函数  </p>
+<p class="STYLE3">二、实验内容</p>
+<p class="STYLE2"> 1．范例：了解"单界面，多方法"的概念。现有称为figure的基类，存放了各二维对象（三角形、矩形和圆形三个类）的各维数据，set_dim()设置数据，是标准成员函数。</p>
+<p class="STYLE2">show_area()为虚函数，因为计算各对象的面积的方法是不同的。</p>
+<p class="STYLE2"> 【程序】</p>
+<p class="STYLE2">#include &lt; iostream &gt;&nbsp;</p>
+<p class="STYLE2">
+  <iostream>
+using namespace std;</iostream></p>
+<p class="STYLE2">class figure{</p>
+<p class="STYLE2"> protected:</p>
+<p class="STYLE2"> double x,y;</p>
+<p class="STYLE2"> public:</p>
+<p class="STYLE2"> void set_dim(double i,double j=0)</p>
+<p class="STYLE2">{
+  x=i;
+  y=j;
+  }  </p>
+<p class="STYLE2">virtual void show_area()</p>
+<p class="STYLE2">{
+  cout&lt;&lt;"No area computation defined for this class.\n";</p>
+<p class="STYLE2"> }</p>
+<p class="STYLE2"> };</p>
+<p class="STYLE2"> class triangle:public figure{</p>
+<p class="STYLE2"> public:</p>
+<p class="STYLE2">void show_area()</p>
+<p class="STYLE2">{
+cout&lt;&lt;"Triangle with height "&lt;&lt; x&lt;&lt;" and base "&lt;&lt; y&lt;&lt;" has an area of "&lt;&lt; x*0.5*y&lt;&lt; endl; </p>
+<p class="STYLE2"> }</p>
+<p class="STYLE2"> };</p>
+<p class="STYLE2"> class square:public figure{</p>
+<p class="STYLE2"> public:</p>
+<p class="STYLE2">void show_area()</p>
+<p class="STYLE2">{
+  cout&lt;&lt;"Square with dimensions "&lt;&lt; x&lt;&lt;" and "&lt;&lt; y&lt;&lt;" has an area of "&lt;&lt; x*y&lt;&lt; endl;</p>
+<p class="STYLE2"> }  </p>
+<p class="STYLE2">};</p>
+<p class="STYLE2"> class circle:public figure{</p>
+<p class="STYLE2"> public:  </p>
+<p class="STYLE2">void show_area()</p>
+<p class="STYLE2">{
+  cout&lt;&lt;"Circle with radius "&lt;&lt; x&lt;&lt;" has an area of "&lt;&lt;3.14159*x*x&lt;&lt; endl;</p>
+<p class="STYLE2"> }  </p>
+<p class="STYLE2">};</p>
+<p class="STYLE2"> int main(){</p>
+<p class="STYLE2"> figure *p;  </p>
+<p class="STYLE2">triangle t; </p>
+<p class="STYLE2">square s;</p>
+<p class="STYLE2"> circle c;</p>
+<p class="STYLE2"> p=&amp;t;</p>
+<p class="STYLE2"> p-&gt;set_dim(10.0,5.0);</p>
+<p class="STYLE2"> p-&gt;show_area();</p>
+<p class="STYLE2"> p=&amp;s;</p>
+<p class="STYLE2"> p-&gt;set_dim(10.0,5.0);</p>
+<p class="STYLE2"> p-&gt;show_area();</p>
+<p class="STYLE2"> p=&amp;c;
+  p-&gt;set_dim(10.0);</p>
+<p class="STYLE2"> p-&gt;show_area();  </p>
+<p class="STYLE2">return 0;</p>
+<p class="STYLE2"> }
+  &nbsp;</p>
+<p class="STYLE2">【要求】</p>
+<p class="STYLE2"> （1）	建立工程，录入上述程序，调试运行并记录运行结果。  </p>
+<p class="STYLE2">（2）	修改上述程序，将virtual void show_area()中的virtual去掉，重新调试运行观察结果有何变化？为什么？</p>
+<p class="STYLE2"> （3）	修改上述程序入口函数，使其动态建立三角形、矩形和圆形3个对象，通过基类指针访问这3个对象，然后释放这3个对象。  </p>
+<p class="STYLE2">（4）	修改类定义中的析构函数，使之适应用户动态定义对
+  
+  2、使用纯虚函数和抽象类对实验十六中的题1进行改进。  </p>
+<p class="STYLE2">【要求】先定义一个抽象类Element,提供显示、求面积等公共接口（虚函数），派生出Point、Line、Circle等图形元素类，并重新定义（override）这些虚函数，完成各自的任务。</p>
+<p class="STYLE2"> 在这里，Element是抽象基类，它不能提供具体的显示操作，应将其成员函数定义为纯虚函数。只有采用指向基类的指针或对基类的引用进行调用，实现的才是动态绑定，</p>
+<p class="STYLE2">完成运行时的多态性。</p>
+<p class="STYLE2"> <strong>3、</strong>编写计算定积分的类。采用纯虚函数和抽象基类往往是建立一个类的框架，并非是要建立一个完整的类。要求首先定义定积分抽象基类basic_inte，</p>
+<p class="STYLE2">该基类数据包括积分左右边界、划分区间的数量、步长和定积分值，同时包括一个计算积分的纯虚函数：virtual void integrate()=0。</p>
+<p class="STYLE2">第二步，由该基类派生出矩形法、梯形法和辛普生定积分类：rectangle、ladder和simpson。</p>
+<p class="STYLE2">第三步，编写一个积分函数，以指向定积分抽象基类basic_inte的指针为参数，实现动态的多态性。
+  
+  
+  &nbsp;</p>
+
+
+</body></html>

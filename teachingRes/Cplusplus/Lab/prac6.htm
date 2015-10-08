@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0046)http://202.114.18.8:8080/cshiyan/cpp/exp6.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>实验六</title>
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-size: 24px;
+	color: #990000;
+}
+.STYLE2 {font-size: 16px}
+.STYLE3 {
+	color: #990000;
+	font-weight: bold;
+}
+.STYLE4 {color: #990000}
+-->
+</style>
+<style type="text/css"></style></head>
+
+<body>
+<p align="center"><span class="STYLE1"><strong>实验六</strong><strong> 文本文件的简单应用</strong></span></p>
+<p align="left" class="STYLE2"><strong>一.实验目的</strong></p>
+<p class="STYLE2">(1)学会将程序运行的结果存入文本文件</p>
+ <p class="STYLE2">(2)学会从文本文件中读取数据，并进行运算。 </p>
+ <p class="STYLE2"><strong>
+  二.实验内容
+ </strong>
+</p><p class="STYLE2">1.范例：修改实验五中的第二题，求出水仙花数后不是在屏幕上显示而是存入文本文件。请在退出程序后，用记事本打开该文本文件，查看结果。
+  
+</p><p class="STYLE2">【分析】（使用文件的格式） </p>
+ <p class="STYLE2">(1)首先，说明一个文件流对象（内部文件）。文件流类型ifstream支持从输入文件中提取数据的操作，</p>
+ <p class="STYLE2">而文件流类型ofstream用于完成将数据写入输出文件中各种操作。</p>
+ <p class="STYLE2">ifstream ifile ;//定义文件输入流对象ifile <br>
+   ofstream ofile ;  ///定义文件输出流对象ofile <br>
+   特别注意：输入文件用于读操作，输出文件用于写操作。 </p>
+<p class="STYLE2">(2)然后打开文件。在文件流对象和磁盘文件名之间建立联系。</p>
+<p class="STYLE2">ifile.open(“my_in_file.txt”);<br>
+  ofile.open(“my_out_file.txt”);</p>
+<p class="STYLE2">(3)对文件进行读/写操作。可以使用C++的提取运算符（&gt;&gt;）和插入运算符(&lt;&lt;)进行，</p>
+<p class="STYLE2">也可以使用读字符的get( )函数和读字符串的getline( )函数。</p>
+<p class="STYLE2">读写文件时，使用输出文件（如ofile）代替cout，用输入文件(如 ifile)代替cin。 </p>
+<p class="STYLE2">(4)最后关闭文件。 </p>
+<p class="STYLE2">ifile.close( );<br>
+  Ofile.close( );<br>
+  关闭文件时，系统把与该文件相关联的文件缓冲区中的数据写到磁盘文件中，保证文件的完整性；</p>
+<p class="STYLE2">同时把磁盘文件名与文件流对象之间的关联断开，可防止误操作修改了磁盘文件。 </p>
+<p class="STYLE2">【程序】</p>
+<p class="STYLE2"><img src="./prac6_files/16.jpg" width="511" height="464" align="middle"></p>
+<p class="STYLE2"><strong>&nbsp;2</strong>．范例：编程从上题生成的文本文件读取水仙花数，并显示在屏幕上。 <br>
+【程序】 </p>
+<p class="STYLE2"><img src="./prac6_files/17.jpg" width="652" height="353" align="middle"></p>
+<p class="STYLE2">&nbsp;</p>
+<p class="STYLE2">【思考】 </p>
+<p class="STYLE2">(1)本程序在读到文件的结束符之前，先读了一个空串，所以输出时多了一个空行。能去掉该空行吗？请试试。 </p>
+<p class="STYLE2">(2)请尝试使用别的方法对文件进行读/写操作。 </p>
+<p class="STYLE2">&nbsp;</p>
+<p class="STYLE2"><strong>3.</strong> 编写程序求500 以内的勾股弦数，即满足 c<span class="STYLE3">2</span>=b<span class="STYLE4">2</span>+a<span class="STYLE4">2（2为指数）</span>的3个数，要求b&gt;a。将所有符合要求的组合存入文本文件中。 </p>
+<p class="STYLE2">&nbsp;</p>
+<p class="STYLE2"><strong>4</strong>.编写程序从上题建立的文本文件中读取500以内的勾股弦数并显示在屏幕上。 </p>
+<ol class="STYLE2"><ol>
+</ol>
+</ol>
+<span class="STYLE2"><br clear="all">
+</span>
+<p class="STYLE2">&nbsp; </p>
+<p align="center" class="STYLE2">&nbsp;</p>
+
+
+</body></html>
