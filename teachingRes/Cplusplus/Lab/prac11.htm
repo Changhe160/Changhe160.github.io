@@ -41,9 +41,8 @@
 <p class="STYLE2"> Rectangle::Rectangle（const Rectangle &amp; rhs）:m_left(rhs.m_left),m_top(rhs.m_top),m_right(rhs.m_right),m_bottom(rhs.m_bottom){  </p>
 
 <p class="STYLE2">}//复制构造函数</p>
-<p class="STYLE2"> 在main( )函数中添加以下代码：</p>
+<p class="STYLE2"> 在main( )函数中添加以下代码，单步调试时进入复制构造函数，查看其调用情况：</p>
 <p class="STYLE2"> Rectangle rect2(rect1);</p>
 <p class="STYLE2"> cout &lt; &lt; ”由复制构造函数生成的rect2:”&lt;&lt;&lt; endl;</p>
-<p class="STYLE2">rect2.Show( );</p>
-<p class="STYLE2"> 这里的复制构造函数是默认的按成员语义定义的，可以不写，系统会自动提供。&nbsp;</p>
+<p class="STYLE2">rect2.Show( );&nbsp;</p>
 </body></html>
