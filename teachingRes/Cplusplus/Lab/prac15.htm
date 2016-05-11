@@ -16,43 +16,25 @@
 <style type="text/css"></style></head>
 
 <body>
-<p align="center"><span class="STYLE1"><strong>实验十五</strong><strong> 动态内存分配与深复制</strong><strong> </strong></span></p>
+<p align="center"><span class="STYLE1"><strong>实验十六</strong><strong> 动态内存分配与深复制</strong><strong> </strong></span></p>
 <p class="STYLE3">&nbsp;一、	实验目的</p>
 <p class="STYLE2"> 1．	理解运行时内存分配的概念，掌握自由存储区内存动态分配的方法。</p>
 <p class="STYLE2"> 2．	理解内部包含为指针动态分配内存的类对象复制时的浅复制和深复制的概念，会编写深复制构造函数和赋值复制运算符。</p>
 <p class="STYLE3"> 二、	实验内容  </p>
 <p class="STYLE2"><strong>1．</strong>	编程： 仿照标准字符串类string ，采用动态字符数组来改造主教材5.6.3节中的自定义字符串类，要求可自动适应不同的串长度。</p>
 <p class="STYLE2"> 【提示】 新的自定义字符串类mysring 如下： </p>
-<p class="STYLE2">class mystring</p>
-<p class="STYLE2">{
-char* str;</p>
-<p class="STYLE2"> int maxsize;</p>
-<p class="STYLE2">int last;</p>
-<p class="STYLE2"> public:</p>
-<p class="STYLE2"> mystring(); </p>
-<p class="STYLE2">mystring(char *s);</p>
-<p class="STYLE2"> mystring(mystring &amp; st);</p>
-<p class="STYLE2"> ~mystring();  </p>
-<p class="STYLE2">void show();</p>
-<p class="STYLE2"> char &amp; operator[](int i);</p>
-<p class="STYLE2"> mystring &amp; operator=(mystring &amp;);  </p>
-<p class="STYLE2">mystring &amp; operator=(char *);//这里重载的=是把C风格字符串赋给mystring</p>
-<p class="STYLE2"> mystring operator+(mystring &amp;);</p>
-<p class="STYLE2"> mystring operator+=(mystring &amp;);</p>
-<p class="STYLE2"> bool operator&lt;(mystring &amp;);  </p>
-<p class="STYLE2">bool operator==(mystring &amp;);</p>
-<p class="STYLE2"> };
-  &nbsp;</p>
+<p class="STYLE2"><img src="prac15_files/1.png" width="657" height="474" />&nbsp;</p>
 <p class="STYLE2">请读者完成各函数的定义，并测试。</p>
 <p class="STYLE2">【分析】</p>
 <p class="STYLE2">本题的难点是判断串长是否超出串的最大允许长度，以及怎样重新分配字符数组，并保留原来的字符数组。</p>
-<p class="STYLE2"> <strong>2．</strong>为使用本实验第1题所定义的自定义字符串类的学生类和使用动态C风格字符串的学生类编写复制构造函数。</p>
-<p class="STYLE2">对比两者的差别，主要是复制构造函数student(student &amp; std) 和复制构造函数dstudent(dstudent &amp; std)的实现。</p>
-<p class="STYLE2">请按提示要求完成两复制构造函数，其余代码已给出。
+<p class="STYLE2"> <strong>2．</strong>将实验十五改为动态内存分配，依然用实验十五测试代码进行测试，模板声明如下
   &nbsp;</p>
-<p class="STYLE2"><img src="./prac15_files/38.jpg" width="559" height="495" align="middle">&nbsp;</p>
-<p class="STYLE2"><img src="./prac15_files/39.jpg" width="570" height="418" align="middle">&nbsp;</p>
-<p class="STYLE2"><img src="./prac15_files/40.jpg" width="577" height="477" align="middle">&nbsp;</p>
+<p class="STYLE2">&nbsp;<img src="prac15_files/2.png" width="756" height="603" /></p>
+<p class="STYLE2">&nbsp;3. 附加题： 从程序运行效率的角度，尝试改进第二题的设计和代码，提示，考虑如下代码内存释放和分配的频率： myVector&lt;int&gt; vi; vi.push_back(0); vi.push_back(0);</p>
+<span class="STYLE2">vi.push_back(0);</span>
+<p class="STYLE2">&nbsp;</p>
+<p class="STYLE2">&nbsp; </p>
+<p class="STYLE2">&nbsp;</p>
 <p class="STYLE2">&nbsp;</p>
 
 
