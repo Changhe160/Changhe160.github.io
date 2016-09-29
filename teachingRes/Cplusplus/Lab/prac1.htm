@@ -2,7 +2,7 @@
 <!-- saved from url=(0046)http://202.114.18.8:8080/cshiyan/cpp/exp1.html -->
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>ʵ��һ</title>
+<title>实验一</title>
 <style type="text/css">
 <!--
 .STYLE1 {
@@ -16,89 +16,89 @@
 <style type="text/css"></style></head>
 
 <body>
-<div align="center" class="STYLE1">ʵ��һ Visual C++���ɿ�����������</div>
-<p><strong>һ��	ʵ��Ŀ��</strong></p>
-<p> 1. ����ѧ��ʹ��Visual C++���ɿ���������IDE����</p>
-<p>�ٽ�����˳� ��</p>
-<p>�� �˵������ߵ�ʹ�ã�</p>
-<p>���û��������Ļ��֣�workspace\ source file �� message. </p>
-<p>2. �����˽���Գ���ķ����� </p>
-<p>����<strong>	ʵ������</strong></p>
-<p>������Visual C++����̨Ӧ�ó�����Ʋ��衣</p>
-<p> ��Ϊѧϰ��������C++�ĵ�һ����ѧϰ���ص����㷨����������û�ͼ�ν���ĸ��ţ���ʱ�ɲ��ÿ���̨Ӧ�ó��������ϰ��</p>
-<p> ������һ������̨Ӧ�ó���ʵ�����ó���Ҫ���û��Ӽ�������3��������Ȼ���մ�С�����˳������Ļ�������</p>
-<p>������һ�� ������˳�Visual C++���ɿ���������</p>
-<p>����������Visual  C++���ɿ�������������3�ַ�����<br>
-��1��ѡ��ʼ�˵��ġ����򡱣�Ȼ��ѡ��Microsoft Visual  Studio �����˵�����ѡ��Microsoft  Visual Studio�˵�헣��԰汾6.0Ϊ�� ��ͼ1.1 ��ʾ��</p>
+<div align="center" class="STYLE1">实验一 Visual C++集成开发环境入门</div>
+<p><strong>一、	实验目的</strong></p>
+<p> 1. 初步学会使用Visual C++集成开发环境（IDE）。</p>
+<p>①进入和退出 ；</p>
+<p>② 菜单、工具的使用；</p>
+<p>③用户窗口区的划分：workspace\ source file 和 message. </p>
+<p>2. 初步了解调试程序的方法。 </p>
+<p>二、<strong>	实验内容</strong></p>
+<p>范例：Visual C++控制台应用程序设计步骤。</p>
+<p> 作为学习面向对象的C++的第一步，学习的重点是算法，必须避免用户图形界面的干扰，这时可采用控制台应用程序进行练习。</p>
+<p> 下面是一个控制台应用程序实例，该程序要求用户从键盘输入3个整数，然后按照从小到大的顺序在屏幕上输出。</p>
+<p>【步骤一】 进入和退出Visual C++集成开发环境。</p>
+<p>启动并进入Visual  C++集成开发环境至少有3种方法：<br>
+（1）选择开始菜单的“程序”，然后选择Microsoft Visual  Studio 级联菜单，再选择Microsoft  Visual Studio菜单項，以版本6.0为例 如图1.1 所示。</p>
 <p>   <img src="./prac1_files/1.jpg" width="306" height="78" align="middle"></p>
-<p>&nbsp;&nbsp; ͼ1.1 ����Microsoft Visual C++���ɿ���</p>
-<p>��2���������ϴ���Microsoft Visual C++ 6.0 �Ŀ�ݷ�ʽ��ֱ��˫����ͼ�ꡣ<br>
-  ��3������Ѿ�������ĳ��Visual C++ ���̣�˫���ù��̵���չ��Ϊ.dsw���ļ�ͼ�꣬Ҳ�ɽ��뼯�ɿ������������򿪸ù��̡�<br>
-  ѡ�� ���ļ�|�˳����˵������˳����ɿ���������<br>
-�������������һ������̨Ӧ�ó��򹤳�</p>
-<p>(1)����Microsoft Visual C++ 6.0���ɿ���������ѡ���ļ�|�½����˵�헣������½��Ի��򡣵��������̡���ǩ��</p>
-<p>����ѡ���������ߵ��б�����ѡ��Win32 Console Application ���������ͣ�</p>
-<p>�ڡ��������ơ��ı��������빤����EXP1_1,�ڡ�λ�á��ı��������빤�̱����λ�ã�������ȷ������ť����ͼ1.2 ��ʾ��
+<p>&nbsp;&nbsp; 图1.1 进入Microsoft Visual C++集成开发</p>
+<p>（2）在桌面上创建Microsoft Visual C++ 6.0 的快捷方式，直接双击该图标。<br>
+  （3）如果已经创建了某个Visual C++ 工程，双击该工程的扩展名为.dsw的文件图标，也可进入集成开发环境，并打开该工程。<br>
+  选择 【文件|退出】菜单，可退出集成开发环境。<br>
+【步骤二】创建一个控制台应用程序工程</p>
+<p>(1)进入Microsoft Visual C++ 6.0集成开发环境后，选择【文件|新建】菜单項，弹出新建对话框。单击【工程】标签，</p>
+<p>打开其选项卡，在其左边的列表框中选择【Win32 Console Application 】工程类型，</p>
+<p>在【工程名称】文本框中输入工程名EXP1_1,在【位置】文本框中输入工程保存的位置，单击【确定】按钮，如图1.2 所示。
   
   
 </p>
 <p><img src="./prac1_files/2.jpg" width="745" height="490" align="middle"></p>
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ͼ1.2 �����µ�Ӧ�ó������</p>
-<p>(2)�ڵ����ĶԻ�����ͼ1.3��ʾ����ѡ��һ���չ��̡�����������ɡ���ť</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图1.2 创建新的应用程序界面</p>
+<p>(2)在弹出的对话框（如图1.3所示），选择【一个空工程】，单击【完成】按钮</p>
 <p><img src="./prac1_files/3.jpg" width="615" height="477" align="middle"> </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ͼ1.3 Win32 Console Application Step 1 of 1</p>
-<p>��</p>
-<p>��3)��ʱ���֡��½�������Ϣ���Ի�����ͼ1.4 ��ʾ���ζԻ�������ʾ�û�������һ���յĿ���̨Ӧ�ó��򣬲���û���κ��ļ������ӵ��¹����У���ʱ�����̴�����ɡ�</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图1.3 Win32 Console Application Step 1 of 1</p>
+<p>　</p>
+<p>（3)此时出现【新建工程信息】对话框，如图1.4 所示。次对话框中提示用户创建了一个空的控制台应用程序，并且没有任何文件被添加到新工程中，此时，工程创建完成。</p>
 <p><img src="./prac1_files/4.jpg" width="550" height="525" align="middle"></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ͼ1.4 �¹�����Ϣ�Ի���</p>
-<p>��������������ı༭�����롢���ɺ�ִ�С�
-��1��ѡ���ļ�|�½����˵�헣������½��Ի��򡣵������ļ���ѡ���</p>
-<p>���б�����ѡ��C++ Source File ,�ڡ��ļ������ı����������ļ���Exp1_1.cpp,ѡ�С����ӵ����̡���ѡ����ͼ1.5��ʾ��</p>
-<p>Ȼ�󵥻���ȷ������ť����Դ�ļ��༭���ڣ�����������Դ���룺��ͼ1.6��ʾ�� </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图1.4 新工程信息对话框</p>
+<p>【步骤三】程序的编辑、编译、生成和执行。
+（1）选择【文件|新建】菜单項，弹出新建对话框。单击【文件】选项卡，</p>
+<p>在列表框中选择C++ Source File ,在【文件名】文本框中输入文件名Exp1_1.cpp,选中【添加到工程】复选框，如图1.5所示。</p>
+<p>然后单击【确定】按钮，打开源文件编辑窗口，在其中输入源代码：如图1.6所示。 </p>
 <p><img src="./prac1_files/5.jpg" width="741" height="487" align="middle"></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ͼ1.5<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图1.5<br>
 </p><p><img src="./prac1_files/6.jpg" width="800" height="407" align="middle"></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ͼ1.6 �༭Դ����</p><p>
-Դ�������£���</p><p><img border="0" src="./prac1_files/11.jpg" width="624" height="389"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图1.6 编辑源代码</p><p>
+源代码如下：　</p><p><img border="0" src="./prac1_files/11.jpg" width="624" height="389"></p>
 <p><br>
-</p><p>�����Ѿ����ڵ�Դ�ļ���ѡ�񡾹���|���ӵ�����|�ļ����˵�������򿪵Ĳ����ļ��Ի�����ѡ��������ļ���������ȷ������ť���ɽ������ӵ����̡�<br>
-</p><p>��2��Դ�����������ѡ���齨��|�����롿�˵�����ɱ���Դ�ļ�exp1_1.cpp��ϵͳ�������������ʾ������error����Ϣ�Լ����棨warning����Ϣ��</p>
+</p><p>对于已经存在的源文件，选择【工程|添加到工程|文件】菜单项，在随后打开的插入文件对话框中选择待添加文件，单击【确定】按钮即可将其添加到工程。<br>
+</p><p>（2）源代码输入完后，选择【组建】|【编译】菜单项，即可编译源文件exp1_1.cpp。系统会在输出窗口显示出错（error）信息以及警告（warning）信息。</p>
 <p><br>
-  ������Ϊ0ʱ�����Եõ�Ŀ���ļ���Exp1_1.obj����<br>
-  �������ڣ�output��������ڸ����﷨����ͱ��������Ϣ��<br>
+  当错误为0时。可以得到目标文件（Exp1_1.obj）。<br>
+  编译器在（output）输出窗口给出语法错误和编译错误信息。<br>
 </p>
-<p> �﷨��������
-  ���˫��������Ϣ����ת������Դ����λ�ô���Ȼ������޸ģ�һ���﷨�����������ϵͳ�����ܶ���error��Ϣ��<br>
+<p> 语法错误处理：
+  鼠标双击错误信息可跳转到错误源代码位置处，然后进行修改，一个语法错误可能引发系统给出很多条error信息，<br>
 </p>
-<p> ��ˣ�����һ�������޸ĺ�������±���һ�Σ��Ա���߹���Ч�ʡ�</p>
+<p> 因此，发现一个错误并修改后最好重新编译一次，以便提高工作效率。</p>
 <p><br>
-  <span class="STYLE2">���������</span>��  һ���Ǵ�����C/C++���Զ������罫һ�������ȣ����㣩�����ݸ������ͱ�������Ҫϵͳ���������������Զ�ת��Ϊ���ͣ�</p>
-<p>��ʱС�����ֻᶪʧ�����ϵͳ����������Ϣ��������Ϣ����Ӱ�����ִ�У���������ͨ��ǿ��ת��ȥ��������Ϣ��</p>
-<p>��3��������ɺ�ѡ���齨��|���齨���˵�����Ӳ��������̵�.EXE�ļ����õ���ִ���ļ�Exp1_1.exe����ʱ���������ܸ������Ӵ���linking error����</p>
-<p>�������Ӵ����ԭ�������ȱ������Ŀ��ļ���Ŀ���ļ���������е��õ��ⲿ����û�ж���ȣ�ֻҪ������Ӧ�ĵ������½������ɡ�</p>
-<p>��4���齨��ɺ�ѡ���齨��|��ִ�С��˵��ִ�й����ļ��������һ������DOS�Ĵ��ڣ���Ҫ������3�����ȵ�������Enter������Ļ���ɴ�С�����3����������ͼ1.7��ʾ��</p>
+  <span class="STYLE2">警告错误处理</span>：  一般是触发了C/C++的自动规则，如将一个单精度（浮点）型数据赋给整型变量，需要系统将单精度型数据自动转换为整型，</p>
+<p>此时小数部分会丢失，因而系统给出警告信息，警告信息不会影响程序执行，本例可以通过强制转换去掉警告信息。</p>
+<p>（3）编译完成后选择【组建】|【组建】菜单项，连接并建立工程的.EXE文件，得到可执行文件Exp1_1.exe。这时编译器可能给出连接错误（linking error）。</p>
+<p>产生连接错误的原因可能是缺少所需的库文件或目标文件，或程序中调用的外部函数没有定义等，只要补充相应文档再重新建立即可。</p>
+<p>（4）组建完成后选择【组建】|【执行】菜单项，执行工程文件，会出现一个类似DOS的窗口，按要求输入3个不等的整数后按Enter键，屏幕上由大到小输出这3个整数，如图1.7所示。</p>
 <p><img src="./prac1_files/7.jpg" width="813" height="226" align="middle"></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ͼ1.7 ���н��</p>
-<p>�������ġ�����ĵ���
-  ���г���ʱ�����ܷ��ֳ���û�б�����󣬶���Ҳ��ִ�У���ִ�н�����ԣ���ʱ������ϸ����Դ���򣬻��ɽ������Թ��߽��и��ٵ��ԡ�<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图1.7 运行结果</p>
+<p>【步骤四】程序的调试
+  运行程序时，可能发现程序没有编译错误，而且也能执行，但执行结果不对，此时除了仔细分析源程序，还可借助调试工具进行跟踪调试。<br>
 </p>
-<p>���磬����exp1_1.cpp ��B����else������һ���ֺţ�����
-  ����..else ; {max=b;  min=a;  }
-  ʹ�� 88�� 45��67 �������ݲ��Դ˳��򣬷���������Ϊ67  45  88 ����Ȼ������ԡ�</p>
-<p>��ʱ��Ҫ��Դ������е��ԣ�������ܵ��Թ��̡�
-  ���ȣ���Դ�����п��ܳ��ִ�����������öϵ㣬�����ǽ�����������У�Ȼ��F9�����򵥻��������ϵ����ΰ�ť���ٰ�һ��F9���򵥻����ΰ�ť��ȡ���ϵ㣩</p>
-<p>����ʱ����������һ����ɫԲ�㣬�ϵ����óɹ�����ͼ1.8������A�������˶ϵ㡣 </p>
-<p>Ȼ��ѡ���齨��|����ʼ���ԡ�|��GO���˵����Ҳ��ֱ�ӵ����������ϵ�<img width="30" height="29" src="./prac1_files/exp1_clip_image002.jpg"> ͼ�꣩������ʼִ�У���ִ�е��ϵ㴦ֹͣ����ʱѡ�񡾲鿴��|���Դ���|�Ӳ˵���Watch ��Variables�����˵��</p>
-<p>�򿪼��Ӵ��ںͱ����������۲������ֵ�����������ҳ���ԭ��
-��Watch���ڼ���max��min�������������м��ӡ�Watch���ڵ�ÿһ�п�����ʾһ������������������ʾ��������˫�����ɽ��б༭��</p>
-<p>������ʾ������ֵ���������ɰ�F10���������ٽ��뺯���ڲ�����F11�������ٽ��뺯���ڲ����Ӷϵ�λ�ô�����ִ�С�ͨ������ִ�У�һ��һ�����ִ�У����Կ����������۲�ı����ı仯�Լ�����ִ�������Ƿ���ȷ��</p>
-<p>�������ȷ���������������ģ����������Եļ�����ԭ�������ڱ����У�����a&gt;b,��ִ����if����ģ�max=a;  min=b; ����ͨ������ִ�з�����Ȼִ����else����� ��max=b; min=a; ��</p>
-<p>���Ե�����ִ�е���ͷ��ָλ��ʱ��max=45, min=48,��ͼ1.8��ʾ����Ԥ�ڽ���������˵����������������⡣��ʱ����ϸ����Դ����<span class="STYLE2">��������</span>����else�����ķֺš� </p>
+<p>例如，若在exp1_1.cpp 的B行中else后面多加一个分号，即：
+  ……..else ; {max=b;  min=a;  }
+  使用 88、 45、67 这组数据测试此程序，发现输出结果为67  45  88 ，显然结果不对。</p>
+<p>此时需要对源程序进行调试，下面介绍调试过程。
+  首先，在源程序中可能出现错误的行上设置断点，方法是将光标移至该行，然后按F9键，或单击工具栏上的手形按钮（再按一次F9键或单击手形按钮将取消断点）</p>
+<p>，此时该行左侧出现一个红色圆点，断点设置成功，如图1.8就是在A行设置了断点。 </p>
+<p>然后选择【组建】|【开始调试】|【GO】菜单命令（也可直接单击工具栏上的<img width="30" height="29" src="./prac1_files/exp1_clip_image002.jpg"> 图标），程序开始执行，但执行到断点处停止，这时选择【查看】|调试窗口|子菜单的Watch 和Variables两个菜单项，</p>
+<p>打开监视窗口和变量窗口来观察变量的值，分析并查找出错原因。
+在Watch窗口加入max和min两个变量，进行监视。Watch窗口的每一行可以显示一个变量，其中左栏显示变量名，双击它可进行编辑；</p>
+<p>右栏显示变量的值。接下来可按F10键（不跟踪进入函数内部）或F11键（跟踪进入函数内部）从断点位置处单步执行。通过单步执行（一条一条语句执行）可以看出我们所观察的变量的变化以及程序执行流程是否正确，</p>
+<p>如果不正确是由那条语句引起的，因而有针对性的检查错误原因。例如在本例中，尽管a&gt;b,在执行了if后面的｛max=a;  min=b; ｝后，通过单步执行发现仍然执行了else后面的 ｛max=b; min=a; ｝</p>
+<p>所以当程序执行到箭头所指位置时，max=45, min=48,如图1.8所示，与预期结果不相符，说明程序的流程有问题。此时再仔细分析源程序，<span class="STYLE2">发现问题</span>在于else后多余的分号。 </p>
 <p><img src="./prac1_files/8.jpg" align="middle"></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ͼ1.8 Visual c++����ĵ���</p>
-<p>���Թ����У�Variables���ڶ�̬��ʾ������ֵ�����ִ�ж��仯�Ľ��������������������У�������������Ķ���Variables���ڵ�thisҳ����ʾ��ǰthisָ����ָ�����ĸ���ֵ��
-�����������޸ĺ͵��ԣ�</p>
-<p>ʹ��������������õ������󣬿ɵõ���ȷ��ִ�н���� </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图1.8 Visual c++程序的调试</p>
+<p>调试过程中，Variables窗口动态显示各变量值随程序执行而变化的结果。在面向对象程序设计中，若程序中有类的对象，Variables窗口的this页可显示当前this指针所指向对象的各个值。
+经过反复的修改和调试，</p>
+<p>使程序中所有问题得到改正后，可得到正确的执行结果。 </p>
 
 
 </body></html>
