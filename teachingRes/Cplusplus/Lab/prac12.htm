@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0047)http://202.114.18.8:8080/cshiyan/cpp/exp12.html -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>ʵ��ʮ��</title>
+<title>实验十二</title>
 <style type="text/css">
 <!--
 .STYLE1 {
@@ -17,27 +17,27 @@
 <style type="text/css"></style></head>
 
 <body>
-<div align="center" class="STYLE1">ʵ��ʮ�� ���������</div>
+<div align="center" class="STYLE1">实验十二 运算符重载</div>
 <p class="STYLE3">
-һ��	ʵ��Ŀ��</p>
-<p class="STYLE2"> 1��	�������������Ϊ��Ա�����ķ���</p>
-<p class="STYLE2"> 2��	������Ԫ��������Ԫ�ࡣ  </p>
-<p class="STYLE2">3��	�������������Ϊ��Ԫ�����ķ�����</p>
-<p class="STYLE2"> 4��	ʹ�þ�̬���ݳ�Ա��</p>
-<p class="STYLE3"> ����	ʵ������</p>
-<p class="STYLE2"> 1��Ϊ���̲�����4.2 ��Rectangle�����ӼӼ����ϸ�ֵ�ͼӼ���������غ������Ӽ����ϸ�ֵ���嶨��Ϊ�̶������ε����Ͻǣ�</p>
-<p class="STYLE2">�����½ǵ�������мӼ����㣬ʹ�¾��εĳ���Ϊԭ�����γ���֮�ͻ��ԼӺͼ����ϸ�ֵ����Ϊ��Ա�������������μӼ����㶨��Ϊ��Ԫ������ </p>
-<p class="STYLE2">��Ҫ��
-  (1)	���������£��������Ķ��弰��س�Ա��������Ԫ������ʵ�֣����ֱ𱣴�Ϊrect.h�ļ���rect.cpp�ļ���</p>
+一、	实验目的</p>
+<p class="STYLE2"> 1、	掌握运算符重载为成员函数的方法</p>
+<p class="STYLE2"> 2、	理解友元函数和友元类。  </p>
+<p class="STYLE2">3、	掌握运算符重载为友元函数的方法。</p>
+<p class="STYLE2"> 4、	使用静态数据成员。</p>
+<p class="STYLE3"> 二、	实验内容</p>
+<p class="STYLE2"> 1、为主教材中例4.2 的Rectangle类增加加减复合赋值和加减运算符重载函数。加减复合赋值语义定义为固定长方形的左上角，</p>
+<p class="STYLE2">对右下角的坐标进行加减运算，使新矩形的长宽为原两矩形长宽之和或差，对加和减复合赋值定义为成员函数。两个矩形加减运算定义为友元函数。 </p>
+<p class="STYLE2">【要求】
+  (1)	主程序如下，请完成类的定义及相关成员函数和友元函数的实现，并分别保存为rect.h文件和rect.cpp文件。</p>
 <p class="STYLE2"><img src="./prac12_files/34.jpg" align="middle">&nbsp;</p>
 
 <p class="STYLE2">&nbsp;</p>
-<p class="STYLE2"><strong>2��</strong>��̣��޸����⣬Ҫ�����£�<br>
-  ��1�����ӡ�����������Ϊ��Ա������ <br>
-  ��2��Ϊ������������һ����̬���ݳ�ԱCounter,��ͳ�ƹ������˶��ٸ����ζ���</p>
-<p class="STYLE2">ΪCounter ���Ӷ��塢����ֵ�Լ���������ж��仯�Ĵ��룬����main()�����н��������ע�⾲̬���ݳ�ԱӦ���ж�����˵���� </p>
+<p class="STYLE2"><strong>2、</strong>编程：修改上题，要求如下：<br>
+  （1）将加、减运算重载为成员函数。 <br>
+  （2）为矩形类在增加一个静态数据成员Counter,并统计共产生了多少个矩形对象。</p>
+<p class="STYLE2">为Counter 添加定义、赋初值以及随程序运行而变化的代码，并在main()函数中将其输出。注意静态数据成员应该有定义性说明。 </p>
 <p class="STYLE2">&nbsp;</p>
-<p class="STYLE2"><strong>3��</strong>��ʵ��ʮ������������� add,sub,mul,div,equalTo,lessThan��greaterThan�Ⱥ����ֱ���+,-,*,/,==,<,>������������棬������+=��-=��/=,��*=���ϸ�ֵ��������ء������ԡ� </p>
+<p class="STYLE2"><strong>3、</strong>将实验十第四题分数类中 add,sub,mul,div,equalTo,lessThan和greaterThan等函数分别用+,-,*,/,==,<,>重载运算符代替，并添加+=，-=，/=,和*=复合赋值运算符重载。并测试。 </p>
 <span class="STYLE2"><strong><br clear="all">
 </strong></span>
 

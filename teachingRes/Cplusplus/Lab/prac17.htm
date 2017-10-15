@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0047)http://202.114.18.8:8080/cshiyan/cpp/exp17.html -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>ʵ��ʮ��</title>
+<title>实验十七</title>
 <style type="text/css">
 <!--
 .STYLE1 {
@@ -17,14 +17,14 @@
 <style type="text/css"></style></head>
 
 <body>
-<div align="center" class="STYLE1">ʵ��ʮ�� ���ؼ̳��������</div>
-<p class="STYLE3">һ��	ʵ��Ŀ��</p>
-<p class="STYLE2"> 1��	������ؼ̳еĸ���</p>
-<p class="STYLE2"> 2��	����Ϊ�˱���ͬһ������ֶ���ظ��ĸ��������õ��������������̳С�</p>
-<p class="STYLE3"> ����	ʵ������  </p>
-<p class="STYLE2">1����̣���֪ʱ����TimeType��������DateType����ͨ�����ؼ̳ж�������ʱ����DateTimeType1��</p>
-<p class="STYLE2"> Ȼ��ʹ�þۺϷ�ʽ���幦����ȫһ��������ʱ����DateTimeType2��
-  ʱ����Ķ������£�</p>
+<div align="center" class="STYLE1">实验十七 多重继承与虚基类</div>
+<p class="STYLE3">一、	实验目的</p>
+<p class="STYLE2"> 1．	理解多重继承的概念</p>
+<p class="STYLE2"> 2．	理解为了避免同一基类出现多个重复的副本而采用的虚基类概念和虚拟继承。</p>
+<p class="STYLE3"> 二、	实验内容  </p>
+<p class="STYLE2">1．编程：已知时间类TimeType和日期类DateType，先通过多重继承定义日期时间类DateTimeType1，</p>
+<p class="STYLE2"> 然后使用聚合方式定义功能完全一样的日期时间类DateTimeType2。
+  时间类的定义如下：</p>
 <p class="STYLE2"><img src="./prac17_files/45.jpg" width="510" height="509" align="middle">&nbsp;</p>
 <p class="STYLE2">		year=y;
 	}</p>
@@ -39,11 +39,11 @@
 	  year=y;</p>
 	<p class="STYLE2"> }</p>
 	<p class="STYLE2">};  </p>
-	<p class="STYLE2">��Ҫ����ʹ�����ַ�����������ʱ���࣬������֮��</p>
-	<p class="STYLE2"> <strong>2��</strong>���������������γ���Ϳ����࣬���ɽγ���Ϳ��������������Ƥ���ࡣ��νƤ��ָ���ǽ��γ��ĺ����Ϊ�����Ƶĺ��ᣬ���Լ����������</p>
-	<p class="STYLE2">���������˵��Ϊ������Ա�����Ƥ�����г�����������������ݡ����д����ʵ���������࣬������֮��</p>
-	<p class="STYLE2">��Ҫ��</p>
-	<p class="STYLE2">��1���޸���������ʹ�������ʵ�֣�Ӧ��ȡʲô��ʩ��������кβ�ͬ��
+	<p class="STYLE2">【要求】请使用两种方法定义日期时间类，并测试之。</p>
+	<p class="STYLE2"> <strong>2．</strong>由汽车类派生出轿车类和卡车类，再由轿车类和卡车类多重派生出皮卡类。所谓皮卡指的是将轿车的后备箱改为卡车似的后厢，可以兼运少量货物。</p>
+	<p class="STYLE2">汽车类可以说明为虚基类以避免在皮卡类中出现两组汽车类的数据。请编写程序实现上述各类，并测试之。</p>
+	<p class="STYLE2">【要求】</p>
+	<p class="STYLE2">（1）修改上述程序不使用虚基类实现，应采取什么措施？结果会有何不同？
 &nbsp;            </p>
 	<p class="STYLE2"><img src="./prac17_files/451.jpg" width="369" height="184" align="middle">&nbsp;</p>
 	<p></p>
