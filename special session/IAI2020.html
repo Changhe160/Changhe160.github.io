@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>网页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<p><html></p>
+<head>
+  <title>WCCI 2020 Special Session</title>      
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css"></style></head>
+<p><body bgcolor="#FFFFFF"></p>
+<!--  <body> -->                                            
+<div align="center">
+           
+<table cellspacing="0" cellpadding="0" width="1050" height="1450">
+  <tbody>
+  <tr>
+    <td height="100" colspan="3" valign="top"><img src="https://i.loli.net/2020/06/06/AjQ6bOeduz3sT1U.png" width="1100" height="308"></td>
+    </tr>
+  <tr>
+    <td valign="top" width="250" height="1152"> 
+      <table width="250">
+        <tbody> 
+          <tr><td bgcolor="#CCCCCC" width="350" height="21"><u>
+            <b>邀请组</b></u><b></b></td></tr>
+          <tr>
+            <td width="350" height="250">
+              <p><STRONG>李长河</STRONG>:<BR>
+                <font size="2">中国地质大学（武汉）<BR>
+                 邮箱：lichange@cug.edu.cn</font>
+              <p><STRONG>邹娟</STRONG>:<BR>
+                <font size="2">湘潭大学, <BR>
+                邮箱: zoujuan@xtu.edu.cn</font>
+              <p><STRONG>杨圣祥</STRONG>:<BR>
+                <font size="2">英国德蒙福特大学,<BR>
+                邮箱: syang@dmu.ac.uk</font>
+              <!--<font size="0">&nbsp;</font> --></td></tr>     
+        <tr><td bgcolor="#CCCCCC" width="350" height="21">
+          <u><b>重要日期</b></u></td></tr>
+        <tr>
+          <td height="157">
+            <p>提交论文初稿截止日期：<BR>
+            <font color="red"><strong>2020年6月20日</strong></font></p>
+            <p> 论文录用通知日期：<BR>
+            <font color="red"><strong>2020年8月15日 </strong></font></p>
+            <p>最后提交日期：<BR>
+            <font color="red"><strong>2020年9月1日</strong></font></p></td>
+        </tr>
+        
+        <tr><td bgcolor="#CCCCCC" width="350" height="21"><b><u>投稿须知</u></b></td></tr>
+        <tr>
+          <td height="157">
+            <p>IAI2020网址：<BR>
+            <a href="http://conf.kzgc.com.cn/iai2020/">http://conf.kzgc.com.cn/iai2020/ </a></p>
+            <p>投稿网址：<BR>
+            <a href="https://cms.amss.ac.cn/">https://cms.amss.ac.cn/ </a></p>
+            <p>分组代码：<BR>
+             <font color="red"><strong>UXV2rW</strong></font>  
+        </p></td></tr>
+        </table>
+      <p>&nbsp;</p></td>
+
+    
+    <td valign="top" width="800" height="1152"><table colspan="10" border="0" width="800" height="1084">
+      <tbody> 
+        <tr><td align="center" bgcolor="#CCCCCC" width="734" height="53">
+          <font size="6">邀请组征文</font></td></tr>
+        <tr><td valign="top" width="734" height="151">
+          <center>
+            <hr>
+          </center>                                          
+          
+          <div align="center"><font size="1">&nbsp;</font>
+            <font color="#000000" size="5"><b>动态及不确定环境下的智能优化</b></font>
+            <b><font color="#000000" size="5"><br>
+              </font><font color="#000000" size="1">&nbsp;</font></b></div>
+          
+          <div align="center"><font size="4" face="System">
+            <a href="http://conf.kzgc.com.cn/iai2020/">The 2nd International Conference on Industrial Artificial Intelligence</a></font></div> 
+          
+          <div align="center"><font size="1">&nbsp;</font><font size="3">&nbsp;<br>
+            <font face="System"><strong>October 23-25, 2020 Shenyang, Liaoning, China</strong></font></font></div>
+          <hr>
+          <!--
+       <div align="center"><font size="3" face="System">
+       Sponsored by the IEEE Computational Intelligence Society, IET, Evolutionary 
+       Programming Society, Norwegian University of Science and Technology, and 
+       University of York</font></div>
+       <div align="center">&nbsp;</div>    
+       <div align="center"><font face="System">&nbsp;Submission
+           Deadline:&nbsp;November 1, 2008</font></div>
+       -->    
+        </td></tr>
+        
+        <tr><td align="center" valign="top" width="734" height="800">
+          <div align="left" style="width: 750; height: 745; text-align: left;">
+            <DIV id="ja-container">
+              <DIV id="ja-container2">
+                <DIV id="ja-mainbody-fr">
+                  <!-- BEGIN: CONTENT -->
+                  <DIV id="ja-contentwrap">
+                    <DIV id="ja-content">
+                      <TABLE cellSpacing="0" cellPadding="0">
+                        <TBODY>
+                          <TR>
+                            <TD height="723" vAlign="top"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第2届工业人工智能国际会议将于2020年10月23-25日在辽宁沈阳举办，预备会议于10月21-22日进行。本次会议由东北大学主办，IEEE Computational Intelligence Society、IEEE Industrial Electronics Society、中国自动化学会大数据专业委员会协办，旨在促进自动化与人工智能相结合，推动工业人工智能方向的研究，同时为海内外自动化与人工智能领域的专家、学者、研究生及工程技术人员提供一个学术交流、研讨和报告最新研究成果的平台。录用的英文论文将在 IEEE Xplore 发表（EI 检索），优秀英文论文经修改完善可被推荐至合适的IEEE杂志发表，优秀的中文论文可被推荐至《自动化学报》和《控制工程》上发表。<BR>
+                              </p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现实生产生活中，许多实际的优化问题均具有动态变化和不确定的特点，如污水处理工业中，优化问题会随着污水的成分动态变化；控制器设计过程中，环境或系统噪声会使得参数优化问题具有不确定性。动态和不确定特性增大了优化问题难度，给优化算法设计带来了挑战。对具有动态及不确定性的优化问题，智能优化是一种有效的方法。<BR>
+                                </p>
+								 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;近年来，利用演化算法及其他启发式的智能优化算法解决动态和不确定性的优化问题的思路受到了广大学者的关注，也产生了大批优秀的研究成果。但是，仍然存在一些关键科学难题亟待解决，如：算法如何快速响应各种复杂的环境变化而减少失误？算法如何同时保持较高的收敛速度和较好的种群多样性来持续跟踪变化的最优解？如何有效地利用历史搜索信息和过时的搜索数据来指导算法行为？另外，如何将理论算法更好地应用在实际优化问题中也是一个需要着重关注的方面。本次专题研讨会诚邀学术界、工业界的各类研究人员针对动态优化领域的各个方面进行一次全方位的探讨与学习，欢迎大家就该领域最新的科学问题和研究前沿进行投稿。<BR>
+                                </p>
+                              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;论文的选题范围包括但不限于以下题材：</p>
+                              <UL>
+                                <LI>动态优化问题的测试集设计
+                                  <UL>
+                                    <LI>包括动态单目标、动态约束、动态多目标、动态超多目标优化问题设计</LI>
+                                  </UL>  
+                                <LI>动态优化算法设计
+                                  <UL>
+                                    <LI>包括动态优化算法、动态约束、动态多目标、动态超多目标优化算法设计</LI>
+                                  </UL> 
+                                <LI>动态优化算法的性能评价指标设计
+                                <LI>含噪声的优化问题及算法设计
+                                <LI>动态鲁棒优化问题设计与求解
+                                <LI>不确定性目标建模与优化
+                                <LI>数据驱动的动态演化优化
+                                <LI>自适应、自学习、预测方法的设计
+                                <LI>动态优化与决策
+                                <LI>动态优化算法在实际中的应用
+                             </LI>
+                              </UL>
+                             
+                              </TD>
+                            </TR>
+                          </TBODY>
+                        </TABLE>
+                      <p>&nbsp;</p>
+                      <p>&nbsp;</p>
+                      </DIV>
+                    </DIV>
+                  </DIV>
+                </DIV>
+              </DIV>
+          </div></td></tr>
+  </tbody></table>
+      <p><font size="-2"></font></p>
+      <p>&nbsp;</p>
+  <p>&nbsp;</p></td></tr>                              
+  </tbody>                     
+</table>
+</div>
+<p></body>
+</html></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
